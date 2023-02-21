@@ -135,8 +135,13 @@ body {
 }
 
 input[type="text"] {
+    width: 120px;
     outline: none;
     margin: 0 10px 0 0;
+}
+
+.app_content ul li {
+    list-style-type: none;
 }
 
 .app_content_body {

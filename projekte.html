@@ -35,8 +35,8 @@
         <h1 class="app_page_title">Projekte</h1>
         <div class="app_content_header">
             <span class="action_number">A1</span>
-            <span id="new_customer" class="button add_button" label="Hinzufügen" target="_blank">
-                Projekt hinzufügen
+            <span id="new_project" class="button add_button" label="Hinzufügen" target="_blank">
+                Projekt/Phase hinzufügen
             </span>
             <span class="action_number">A2</span>
             <span class="button filter_button" label="Filter zurücksetzen">
@@ -46,10 +46,23 @@
         <div class="app_content_body">
             <ul class="table_column">
                 <li class="table_column_title">
-                    Project Code
+                    Kunde
                     <span class="action_number">A3</span>
                     <span class="sort"></span>
                     <span class="action_number">A4</span>
+                    <span class="filter"></span>
+                </li>
+                <li>Kunde_A</li>
+                <li>Kunde_B</li>
+                <li>Kunde_B</li>
+                <li>Kunde_B</li>
+                <li>Kunde_C</li>
+                <li>Kunde_C</li>
+            </ul>
+            <ul class="table_column">
+                <li class="table_column_title">
+                    Project Code
+                    <span class="sort"></span>
                     <span class="filter"></span>
                 </li>
                 <li>Projekt_A</li>
@@ -58,11 +71,7 @@
                 <li>Projekt_B</li>
                 <li class="project">Project_C</li>
                 <li class="project">Project_C</li>
-                <li class="new_project hidden">
-                    <input type="text" placeholder="Projekt Code">
-                    <span class="action_number">A7</span>
-                    <span id="save_project" class="button save_button">Speichern</span>
-                </li>
+                
                 <li class="edit_project hidden">
                     <input type="text" placeholder="Project_C">
                     <span class="action_number">A7</span>
@@ -94,6 +103,32 @@
                 <li>Projekt_B_Phase_3</li>
                 <li>Project_C_Phase_1</li>
                 <li>Project_C_Phase_2</li>
+            </ul>
+            <ul class="table_column">
+                <li class="table_column_title">
+                    Start
+                    <span class="sort"></span>
+                    <span class="filter"></span>
+                </li>
+                <li>01.02.2023</li>
+                <li>05.04.2023</li>
+                <li>01.06.2023</li>
+                <li>01.10.2023</li>
+                <li>20.02.2023</li>
+                <li>01.04.2023</li>
+            </ul>
+            <ul class="table_column">
+                <li class="table_column_title">
+                    Ende
+                    <span class="sort"></span>
+                    <span class="filter"></span>
+                </li>
+                <li>31.05.2023</li>
+                <li>31.05.2023</li>
+                <li>30.09.2023</li>
+                <li>25.12.2023</li>
+                <li>31.03.2023</li>
+                <li>31.08.2023</li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
@@ -134,14 +169,31 @@
                     <span id="delete_customer" class="action_button delete" title="Löschen"></span>
                 </li>
                 <li>
-                    <span class="action_number">A5</span>
-                    <span class="action_button edit" title="Ändern"></span>
                     <span class="action_number">A6</span>
+                    <span class="action_button edit" title="Ändern"></span>
+                    <span class="action_number">A7</span>
                     <span class="action_button delete" title="Löschen"></span>
                 </li>
             </ul>
             
         </div>
+        <ul>
+            <li class="new_project hidden">
+                <select name="" id="">
+                    <option value="Kunde wählen">Kunde wählen</option>
+                    <option value="Kunde_A">Kunde_A</option>
+                    <option value="Kunde_A">Kunde_B</option>
+                    <option value="Kunde_A">Kunde_C</option>
+                </select>
+                <input type="text" placeholder="Projekt Code">
+                <input type="text" placeholder="Projekt_ID">
+                <input type="text" placeholder="Projekt Phase">
+                <input type="text" placeholder="Start">
+                <input type="text" placeholder="Ende">
+                <span class="action_number">A8</span>
+                <span id="save_project" class="button save_button">Speichern</span>
+            </li>
+        </ul>
         <div class="app_content_footer">
             
         </div>
@@ -153,21 +205,21 @@
         <p class="popup_close">x</p>
         <span class="action_number">M1</span>
         <p>
-            Ein neues Projekt wurde gespeichert.
+            Ein Projekt wurde gespeichert.
         </p>
     </div>
     <div id="popup_save_error" class="popup popup_negativ">
         <p class="popup_close">x</p>
         <span class="action_number">M2</span>
         <p>
-            Es ist ein Fehler aufgetreten.
+            Es ist ein Fehler beim Speichern aufgetreten.
         </p>
     </div>
     <div id="popup_delete_warning" class="popup popup_negativ">
         <p class="popup_close">x</p>
         <span class="action_number">M3</span>
         <p>
-            Es gibt mindestens eine untergeordnete Projektphase. Das Projekt darf nicht gelöscht werden.
+            Es gibt mindestens einen untergeordneten Mitarbeiter. Das Projekt darf nicht gelöscht werden.
         </p>
     </div>
     <div id="popup_delete_success" class="popup popup_positiv">
@@ -181,7 +233,7 @@
         <p class="popup_close">x</p>
         <span class="action_number">M5</span>
         <p>
-            Es ist ein Fehler aufgetreten.
+            Es ist ein Fehler beim Löschen aufgetreten.
         </p>
     </div>
     <div id="popup_delete_ok" class="popup popup_neutral">
