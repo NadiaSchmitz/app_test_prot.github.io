@@ -32,11 +32,11 @@
     </div>
 
     <div class="app_content">
-        <h1 class="app_page_title">Kunden</h1>
+        <h1 class="app_page_title">Projekte</h1>
         <div class="app_content_header">
             <span class="action_number">A1</span>
             <span id="new_customer" class="button add_button" label="Hinzufügen" target="_blank">
-                Hinzufügen
+                Projekt hinzufügen
             </span>
             <span class="action_number">A2</span>
             <span class="button filter_button" label="Filter zurücksetzen">
@@ -46,35 +46,54 @@
         <div class="app_content_body">
             <ul class="table_column">
                 <li class="table_column_title">
-                    Kunde
+                    Project Code
                     <span class="action_number">A3</span>
                     <span class="sort"></span>
                     <span class="action_number">A4</span>
                     <span class="filter"></span>
                 </li>
-                <li>Kunde_A</li>
-                <li>Kunde_B</li>
-                <li class="customer">Kunde_C</li>
-                <li class="new_customer hidden">
-                    <input type="text" placeholder="Kundenname">
+                <li>Projekt_A</li>
+                <li>Projekt_B</li>
+                <li>Projekt_B</li>
+                <li>Projekt_B</li>
+                <li class="project">Project_C</li>
+                <li class="project">Project_C</li>
+                <li class="new_project hidden">
+                    <input type="text" placeholder="Projekt Code">
                     <span class="action_number">A7</span>
-                    <span id="save_customer" class="button save_button">Speichern</span>
+                    <span id="save_project" class="button save_button">Speichern</span>
                 </li>
-                <li class="edit_customer hidden">
-                    <input type="text" placeholder="Kunde_C">
+                <li class="edit_project hidden">
+                    <input type="text" placeholder="Project_C">
                     <span class="action_number">A7</span>
-                    <span id="save_edit_customer" class="button save_button">Speichern</span>
+                    <span id="save_edit_project" class="button save_button">Speichern</span>
                 </li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
-                    Kunde_ID
+                    Projekt_ID
                     <span class="sort"></span>
                     <span class="filter"></span>
                 </li>
                 <li>123</li>
                 <li>234</li>
-                <li>Web_App_Kunde_ID</li>
+                <li>234</li>
+                <li>234</li>
+                <li>Web_App_Projekt_ID</li>
+                <li>Web_App_Projekt_ID</li>
+            </ul>
+            <ul class="table_column">
+                <li class="table_column_title">
+                    Projekt_Phase
+                    <span class="sort"></span>
+                    <span class="filter"></span>
+                </li>
+                <li>Projekt_A_Phase_1</li>
+                <li>Projekt_B_Phase_1</li>
+                <li>Projekt_B_Phase_2</li>
+                <li>Projekt_B_Phase_3</li>
+                <li>Project_C_Phase_1</li>
+                <li>Project_C_Phase_2</li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
@@ -84,6 +103,9 @@
                 </li>
                 <li>ERP-System</li>
                 <li>ERP-System</li>
+                <li>ERP-System</li>
+                <li>ERP-System</li>
+                <li>Web-App</li>
                 <li>Web-App</li>
             </ul>
             <ul class="table_column">
@@ -94,10 +116,15 @@
                 </li>
                 <li>-</li>
                 <li>-</li>
+                <li>-</li>
+                <li>-</li>
+                <li>Margan, Spirre</li>
                 <li>Margan, Spirre</li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">Action</li>
+                <li>-</li>
+                <li>-</li>
                 <li>-</li>
                 <li>-</li>
                 <li>
@@ -105,6 +132,12 @@
                     <span id="edit_customer" class="action_button edit" title="Ändern"></span>
                     <span class="action_number">A6</span>
                     <span id="delete_customer" class="action_button delete" title="Löschen"></span>
+                </li>
+                <li>
+                    <span class="action_number">A5</span>
+                    <span class="action_button edit" title="Ändern"></span>
+                    <span class="action_number">A6</span>
+                    <span class="action_button delete" title="Löschen"></span>
                 </li>
             </ul>
             
@@ -120,7 +153,7 @@
         <p class="popup_close">x</p>
         <span class="action_number">M1</span>
         <p>
-            Ein neuer Kunde wurde gespeichert.
+            Ein neues Projekt wurde gespeichert.
         </p>
     </div>
     <div id="popup_save_error" class="popup popup_negativ">
@@ -134,14 +167,14 @@
         <p class="popup_close">x</p>
         <span class="action_number">M3</span>
         <p>
-            Es gibt mindestens ein untergeordnetes Projekt. Der Kunde darf nicht gelöscht werden.
+            Es gibt mindestens eine untergeordnete Projektphase. Das Projekt darf nicht gelöscht werden.
         </p>
     </div>
     <div id="popup_delete_success" class="popup popup_positiv">
         <p class="popup_close">x</p>
         <span class="action_number">M4</span>
         <p>
-            Ein Kunde wurde gelöscht.
+            Ein Projekt wurde gelöscht.
         </p>
     </div>
     <div id="popup_delete_error" class="popup popup_negativ">
@@ -154,29 +187,29 @@
     <div id="popup_delete_ok" class="popup popup_neutral">
         <span class="action_number">M6</span>
         <p>
-            Sind Sie sicher, dass Sie einen Kunde löschen wollen?
+            Sind Sie sicher, dass Sie ein Project löschen wollen?
         </p>
         <span class="button ok_button">Ja</span>
         <span class="button no_button">Nein, abbrechen</span>
     </div>
 </div>
 <script>
-    $("#new_customer").click(function() {
-        $(".new_customer").removeClass("hidden");
+    $("#new_project").click(function() {
+        $(".new_project").removeClass("hidden");
     })
 
-    $("#save_customer").click(function() {
-        $(".new_customer").addClass("hidden");
+    $("#save_project").click(function() {
+        $(".new_project").addClass("hidden");
     })
 
-    $("#edit_customer").click(function() {
-        $(".edit_customer").removeClass("hidden");
-        $(".customer").addClass("hidden");
+    $("#edit_project").click(function() {
+        $(".edit_project").removeClass("hidden");
+        $(".project").addClass("hidden");
     })
 
-    $("#save_edit_customer").click(function() {
-        $(".edit_customer").addClass("hidden");
-        $(".customer").removeClass("hidden");
+    $("#save_edit_project").click(function() {
+        $(".edit_project").addClass("hidden");
+        $(".project").removeClass("hidden");
     })
 
 </script>
