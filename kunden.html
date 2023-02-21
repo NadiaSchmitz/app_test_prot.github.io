@@ -60,7 +60,7 @@
                     <span id="save_customer" class="button save_button">Speichern</span>
                 </li>
                 <li class="edit_customer hidden">
-                    <input type="text" placeholder="Kundenname">
+                    <input type="text" placeholder="Kunde_C">
                     <span class="action_number">A7</span>
                     <span id="save_edit_customer" class="button save_button">Speichern</span>
                 </li>
@@ -143,10 +143,10 @@
             <p class="popup_close">x</p>
             <span class="action_number">M4</span>
             <p>
-                Ein neuer Kunde wurde gelöscht.
+                Ein Kunde wurde gelöscht.
             </p>
         </div>
-        <div id="popup_delete_error" class="popup popup_positiv">
+        <div id="popup_delete_error" class="popup popup_negativ">
             <p class="popup_close">x</p>
             <span class="action_number">M5</span>
             <p>
@@ -174,10 +174,12 @@
 
     $("#edit_customer").click(function() {
         $(".edit_customer").removeClass("hidden");
+        $(".customer").addClass("hidden");
     })
 
     $("#save_edit_customer").click(function() {
         $(".edit_customer").addClass("hidden");
+        $(".customer").removeClass("hidden");
     })
 
 </script>
