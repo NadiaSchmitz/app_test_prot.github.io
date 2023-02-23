@@ -57,7 +57,15 @@
                 <li>Kunde_B</li>
                 <li>Kunde_B</li>
                 <li>Kunde_C</li>
-                <li>Kunde_C</li>
+                <li class="project">Kunde_C</li>
+                <li class="edit_project hidden">
+                    <select name="" id="">
+                        <option value="Kunde wählen">Kunde wählen</option>
+                        <option value="Kunde_A">Kunde_A</option>
+                        <option value="Kunde_A">Kunde_B</option>
+                        <option value="Kunde_A">Kunde_C</option>
+                    </select>
+                </li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
@@ -69,13 +77,10 @@
                 <li>Projekt_B</li>
                 <li>Projekt_B</li>
                 <li>Projekt_B</li>
+                <li>Project_C</li>
                 <li class="project">Project_C</li>
-                <li class="project">Project_C</li>
-                
                 <li class="edit_project hidden">
                     <input type="text" placeholder="Project_C">
-                    <span class="action_number">A7</span>
-                    <span id="save_edit_project" class="button save_button">Speichern</span>
                 </li>
             </ul>
             <ul class="table_column">
@@ -88,7 +93,7 @@
                 <li>234</li>
                 <li>234</li>
                 <li>234</li>
-                <li>Web_App_Projekt_ID</li>
+                <li>345</li>
                 <li>Web_App_Projekt_ID</li>
             </ul>
             <ul class="table_column">
@@ -102,7 +107,10 @@
                 <li>01.06.2023</li>
                 <li>01.10.2023</li>
                 <li>20.02.2023</li>
-                <li>01.04.2023</li>
+                <li class="project">01.04.2023</li>
+                <li class="edit_project hidden">
+                    <input type="text" placeholder="Start">
+                </li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
@@ -115,7 +123,10 @@
                 <li>30.09.2023</li>
                 <li>25.12.2023</li>
                 <li>31.03.2023</li>
-                <li>31.08.2023</li>
+                <li class="project">31.08.2023</li>
+                <li class="edit_project hidden">
+                    <input type="text" placeholder="Ende">
+                </li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
@@ -127,7 +138,7 @@
                 <li>ERP-System</li>
                 <li>ERP-System</li>
                 <li>ERP-System</li>
-                <li>Web-App</li>
+                <li>ERP-System</li>
                 <li>Web-App</li>
             </ul>
             <ul class="table_column">
@@ -140,7 +151,7 @@
                 <li>-</li>
                 <li>-</li>
                 <li>-</li>
-                <li>Margan, Spirre</li>
+                <li>-</li>
                 <li>Margan, Spirre</li>
             </ul>
             <ul class="table_column">
@@ -149,17 +160,14 @@
                 <li>-</li>
                 <li>-</li>
                 <li>-</li>
+                <li>-</li>
                 <li>
                     <span class="action_number">A5</span>
-                    <span id="edit_customer" class="action_button edit" title="Ändern"></span>
+                    <span id="edit_project" class="action_button edit" title="Ändern"></span>
                     <span class="action_number">A6</span>
-                    <span id="delete_customer" class="action_button delete" title="Löschen"></span>
-                </li>
-                <li>
-                    <span class="action_number">A6</span>
-                    <span class="action_button edit" title="Ändern"></span>
-                    <span class="action_number">A7</span>
                     <span class="action_button delete" title="Löschen"></span>
+                    <span class="action_number">A8</span>
+                    <span id="save_edit_project" class="action_button save"></span>
                 </li>
             </ul>
             
@@ -173,11 +181,9 @@
                     <option value="Kunde_A">Kunde_C</option>
                 </select>
                 <input type="text" placeholder="Projekt Code">
-                <input type="text" placeholder="Projekt_ID">
-                <input type="text" placeholder="Projekt Phase">
                 <input type="text" placeholder="Start">
                 <input type="text" placeholder="Ende">
-                <span class="action_number">A8</span>
+                <span class="action_number">A7</span>
                 <span id="save_project" class="button save_button">Speichern</span>
             </li>
         </ul>

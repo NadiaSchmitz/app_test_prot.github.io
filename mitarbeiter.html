@@ -58,15 +58,8 @@
                 <li>Deston, Hardy</li>
                 <li>Morsan, Hogg</li>
                 <li class="employee">Terren, Liddle</li>
-                <li class="new_employee hidden">
-                    <input type="text" placeholder="Name, Vorname">
-                    <span class="action_number">A7</span>
-                    <span id="save_employee" class="button save_button">Speichern</span>
-                </li>
                 <li class="edit_employee hidden">
-                    <input type="text" placeholder="Terren, Liddle">
-                    <span class="action_number">A7</span>
-                    <span id="save_edit_employee" class="button save_button">Speichern</span>
+                    <input type="text" placeholder="Name, Vorname">
                 </li>
             </ul>
             <ul class="table_column">
@@ -93,7 +86,14 @@
                 <li class="extern">Extern</li>
                 <li>Business-Consulting</li>
                 <li>Business-Consulting</li>
-                <li>-</li>
+                <li class="employee">Talents</li>
+                <li class="edit_employee hidden">
+                    <select name="" id="">
+                        <option value="IT-Consulting">IT-Consulting</option>
+                        <option value="Business-Consulting">Business-Consulting</option>
+                        <option value="Talents">Talents</option>
+                    </select>
+                </li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
@@ -133,10 +133,23 @@
                     <span id="edit_employee" class="action_button edit" title="Ändern"></span>
                     <span class="action_number">A6</span>
                     <span id="delete_employee" class="action_button delete" title="Löschen"></span>
+                    <span class="action_number">A8</span>
+                    <span id="save_edit_employee" class="action_button save"></span>
                 </li>
             </ul>
-            
         </div>
+        <ul>
+            <li class="new_employee hidden">
+                <input type="text" placeholder="Name, Vorname">
+                <select name="" id="">
+                    <option value="IT-Consulting">IT-Consulting</option>
+                    <option value="Business-Consulting">Business-Consulting</option>
+                    <option value="Talents">Talents</option>
+                </select>
+                <span class="action_number">A7</span>
+                <span id="save_employee" class="button save_button">Speichern</span>
+            </li>
+        </ul>
         <div class="app_content_footer">
             
         </div>
