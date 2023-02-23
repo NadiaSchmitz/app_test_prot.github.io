@@ -208,6 +208,14 @@ input[type="text"] {
     background: url(images/delete_icon.png);
 }
 
+.abstrakt {
+    background-color: rgb(184 60 60 / 27%);
+}
+
+.extern {
+    background-color: rgb(157 155 155 / 27%);
+}
+
 .app_content_footer {
     font-weight: 700;
     margin: 30px 0 30px 0;

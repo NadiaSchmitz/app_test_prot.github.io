@@ -35,7 +35,7 @@
         <h1 class="app_page_title">Mitarbeiter</h1>
         <div class="app_content_header">
             <span class="action_number">A1</span>
-            <span id="new_customer" class="button add_button" label="Hinzufügen" target="_blank">
+            <span id="new_employee" class="button add_button" label="Hinzufügen" target="_blank">
                 Hinzufügen
             </span>
             <span class="action_number">A2</span>
@@ -52,8 +52,9 @@
                     <span class="action_number">A4</span>
                     <span class="filter"></span>
                 </li>
+                <li class="abstrakt">Mitarbeiter Abstrakt</li>
                 <li>Braeden, Penrose</li>
-                <li>Josian, Jast</li>
+                <li class="extern">Josian, Jast</li>
                 <li>Deston, Hardy</li>
                 <li>Morsan, Hogg</li>
                 <li class="employee">Terren, Liddle</li>
@@ -74,8 +75,9 @@
                     <span class="sort"></span>
                     <span class="filter"></span>
                 </li>
+                <li class="abstrakt">000</li>
                 <li>123</li>
-                <li>234</li>
+                <li class="extern">234</li>
                 <li>345</li>
                 <li>456</li>
                 <li>Web_App_Projekt_ID</li>
@@ -86,8 +88,9 @@
                     <span class="sort"></span>
                     <span class="filter"></span>
                 </li>
+                <li class="abstrakt">Abstrakt</li>
                 <li>IT-Consulting</li>
-                <li>IT-Consulting</li>
+                <li class="extern">Extern</li>
                 <li>Business-Consulting</li>
                 <li>Business-Consulting</li>
                 <li>-</li>
@@ -98,8 +101,9 @@
                     <span class="sort"></span>
                     <span class="filter"></span>
                 </li>
+                <li class="abstrakt">Abstrakt</li>
                 <li>ERP-System</li>
-                <li>ERP-System</li>
+                <li class="extern">ERP-System</li>
                 <li>ERP-System</li>
                 <li>ERP-System</li>
                 <li>Web-App</li>
@@ -110,23 +114,25 @@
                     <span class="sort"></span>
                     <span class="filter"></span>
                 </li>
+                <li class="abstrakt">Abstrakt</li>
                 <li>-</li>
-                <li>-</li>
+                <li class="extern">-</li>
                 <li>-</li>
                 <li>-</li>
                 <li>Margan, Spirre</li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">Action</li>
+                <li class="abstrakt">-</li>
                 <li>-</li>
-                <li>-</li>
+                <li class="extern">-</li>
                 <li>-</li>
                 <li>-</li>
                 <li>
                     <span class="action_number">A5</span>
-                    <span id="edit_customer" class="action_button edit" title="Ändern"></span>
+                    <span id="edit_employee" class="action_button edit" title="Ändern"></span>
                     <span class="action_number">A6</span>
-                    <span id="delete_customer" class="action_button delete" title="Löschen"></span>
+                    <span id="delete_employee" class="action_button delete" title="Löschen"></span>
                 </li>
             </ul>
             
@@ -183,22 +189,22 @@
     </div>
 </div>
 <script>
-    $("#new_project").click(function() {
-        $(".new_project").removeClass("hidden");
+    $("#new_employee").click(function() {
+        $(".new_employee").removeClass("hidden");
     })
 
-    $("#save_project").click(function() {
-        $(".new_project").addClass("hidden");
+    $("#save_employee").click(function() {
+        $(".new_employee").addClass("hidden");
     })
 
-    $("#edit_project").click(function() {
-        $(".edit_project").removeClass("hidden");
-        $(".project").addClass("hidden");
+    $("#edit_employee").click(function() {
+        $(".edit_employee").removeClass("hidden");
+        $(".employee").addClass("hidden");
     })
 
-    $("#save_edit_project").click(function() {
-        $(".edit_project").addClass("hidden");
-        $(".project").removeClass("hidden");
+    $("#save_edit_employee").click(function() {
+        $(".edit_employee").addClass("hidden");
+        $(".employee").removeClass("hidden");
     })
 
 </script>
