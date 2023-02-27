@@ -26,7 +26,6 @@
                 <li><a href="projekte.html" class="nav_link project_link"title="Projekte"></a></li>
                 <li><a href="mitarbeiter.html" class="nav_link employee_link" title="Mitarbeiter"></a></li>
                 <li><a href="leistungen.html" class="nav_link work_link" title="Leistungen"></a></li>
-                <li><a href="abteilungen.html" class="nav_link department_link" title="Abteilungen"></a></li>
             </ul>	
         </nav>
     </div>
@@ -35,7 +34,7 @@
         <h1 class="app_page_title">Leistungen</h1>
         <div class="app_content_header">
             <span class="action_number">A1</span>
-            <span id="new_customer" class="button add_button" label="Hinzufügen" target="_blank">
+            <span id="new_work" class="button add_button" label="Hinzufügen" target="_blank">
                 Hinzufügen
             </span>
             <span class="action_number">A2</span>
@@ -43,29 +42,86 @@
                 Filter zurücksetzen
             </span>
         </div>
-        <div class="app_content_body">
+        <div class="app_content_body"><ul class="table_column">
+            <li class="table_column_title">
+                Kop.
+            </li>
+            <li>+</li>
+            <li>+</li>
+            <li>+</li>
+            <li>+</li>
+            <li>+</li>
+        </ul>
             <ul class="table_column">
                 <li class="table_column_title">
-                    Datum
+                    Kunde
                     <span class="action_number">A3</span>
                     <span class="sort"></span>
                     <span class="action_number">A4</span>
                     <span class="filter"></span>
                 </li>
-                <li>21.02.2023</li>
-                <li>22.02.2023</li>
-                <li>23.02.2023</li>
-                <li>24.02.2023</li>
-                <li class="work">27.02.2023</li>
-                <li class="new_employee hidden">
-                    <input type="text" placeholder="Name, Vorname">
-                    <span class="action_number">A7</span>
-                    <span id="save_employee" class="button save_button">Speichern</span>
+                <li>Kunde_A</li>
+                <li>Kunde_A</li>
+                <li>Kunde_A</li>
+                <li>Kunde_B</li>
+                <li class="work">Kunde_B</li>
+                <li class="edit_work hidden">
+                    <select name="" id="">
+                        <option value="Kunde wählen">Kunde wählen</option>
+                        <option value="Kunde_A">Kunde_A</option>
+                        <option value="Kunde_B">Kunde_B</option>
+                        <option value="Kunde_C">Kunde_C</option>
+                    </select>
                 </li>
-                <li class="edit_employee hidden">
-                    <input type="text" placeholder="Terren, Liddle">
-                    <span class="action_number">A7</span>
-                    <span id="save_edit_employee" class="button save_button">Speichern</span>
+            </ul>
+            <ul class="table_column">
+                <li class="table_column_title">
+                    Projekt Code
+                    <span class="sort"></span>
+                    <span class="filter"></span>
+                </li>
+                <li>Projekt_A</li>
+                <li>Projekt_A</li>
+                <li>Projekt_A</li>
+                <li>Projekt_B</li>
+                <li class="work">Projekt_B</li>
+                <li class="edit_work hidden">
+                    <select name="" id="">
+                        <option value="Projekt wählen">Projekt wählen</option>
+                        <option value="Projekt_A">Projekt_A</option>
+                        <option value="Projekt_B">Projekt_B</option>
+                        <option value="Projekt_C">Projekt_C</option>
+                    </select>
+                </li>
+            </ul>
+            <ul class="table_column">
+                <li class="table_column_title">
+                    Datum Beginn
+                    <span class="sort"></span>
+                    <span class="filter"></span>
+                </li>
+                <li>01.01.2023</li>
+                <li>01.02.2023</li>
+                <li>01.03.2023</li>
+                <li>01.04.2023</li>
+                <li class="work">01.05.2023</li>
+                <li class="edit_work hidden">
+                    <input type="text" placeholder="Datum Beginn">
+                </li>
+            </ul>
+            <ul class="table_column">
+                <li class="table_column_title">
+                    Datum Ende
+                    <span class="sort"></span>
+                    <span class="filter"></span>
+                </li>
+                <li>31.01.2023</li>
+                <li>28.02.2023</li>
+                <li>31.03.2023</li>
+                <li>30.04.2023</li>
+                <li class="work">31.05.2023</li>
+                <li class="edit_work hidden">
+                    <input type="text" placeholder="Datum Ende">
                 </li>
             </ul>
             <ul class="table_column">
@@ -78,77 +134,84 @@
                 <li>Josian, Jast</li>
                 <li>Deston, Hardy</li>
                 <li>Morsan, Hogg</li>
-                <li class="employee">Terren, Liddle</li>
-                <li class="new_employee hidden">
-                    <input type="text" placeholder="Name, Vorname">
-                    <span class="action_number">A7</span>
-                    <span id="save_employee" class="button save_button">Speichern</span>
-                </li>
-                <li class="edit_employee hidden">
-                    <input type="text" placeholder="Terren, Liddle">
-                    <span class="action_number">A7</span>
-                    <span id="save_edit_employee" class="button save_button">Speichern</span>
+                <li class="work">Terren, Liddle</li>
+                <li class="edit_work hidden">
+                    <select name="" id="">
+                        <option value="Mitarbeiter wählen">Mitarbeiter wählen</option>
+                        <option value="Tiren">Tiren, Maire</option>
+                        <option value="Loisen">Loisen, Kassi</option>
+                        <option value="Poli">Poli, Stral</option>
+                    </select>
                 </li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
-                    Kunde
+                    Ist
                     <span class="sort"></span>
                     <span class="filter"></span>
                 </li>
-                <li>Kunde_A</li>
-                <li>Kunde_A</li>
-                <li>Kunde_A</li>
-                <li>Kunde_B</li>
-                <li>Kunde_B</li>
-            </ul>
-            <ul class="table_column">
-                <li class="table_column_title">
-                    Projekt Code
-                    <span class="sort"></span>
-                    <span class="filter"></span>
+                <li>Ist</li>
+                <li>Ist</li>
+                <li>-</li>
+                <li>-</li>
+                <li class="work">-</li>
+                <li class="edit_work hidden">
+                    <select name="" id="">
+                        <option value="Ist">Ist</option>
+                        <option value="Plan">Plan</option>
+                    </select>
                 </li>
-                <li>Projekt_A</li>
-                <li>Projekt_A</li>
-                <li>Projekt_A</li>
-                <li>Projekt_B</li>
-                <li>Projekt_B</li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
-                    Projektphase
-                    <span class="sort"></span>
-                    <span class="filter"></span>
-                </li>
-                <li>Projekt_A_Phase_1</li>
-                <li>Projekt_A_Phase_1</li>
-                <li>Projekt_A_Phase_2</li>
-                <li>Projekt_B_Phase_1</li>
-                <li>Projekt_B_Phase_1</li>
-            </ul>
-            <ul class="table_column">
-                <li class="table_column_title">
-                    Verfüg. Max
+                    Soll
                     <span class="sort"></span>
                     <span class="filter"></span>
                 </li>
                 <li>-</li>
                 <li>-</li>
+                <li>Soll</li>
                 <li>-</li>
-                <li>-</li>
-                <li>-</li>
+                <li class="work">-</li>
+                <li class="edit_work hidden">
+                    <select name="" id="">
+                        <option value="Ist">Ist</option>
+                        <option value="Plan">Plan</option>
+                    </select>
+                </li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
-                    Verfüg. Ist
+                    Plan
                     <span class="sort"></span>
                     <span class="filter"></span>
                 </li>
                 <li>-</li>
                 <li>-</li>
                 <li>-</li>
-                <li>-</li>
-                <li>-</li>
+                <li>Plan</li>
+                <li class="work">Plan</li>
+                <li class="edit_work hidden">
+                    <select name="" id="">
+                        <option value="Ist">Ist</option>
+                        <option value="Plan">Plan</option>
+                    </select>
+                </li>
+            </ul>
+            <ul class="table_column">
+                <li class="table_column_title">
+                    Std.
+                    <span class="sort"></span>
+                    <span class="filter"></span>
+                </li>
+                <li>160</li>
+                <li>80</li>
+                <li>36</li>
+                <li>160</li>
+                <li class="work">80</li>
+                <li class="edit_work hidden">
+                    <input type="text" placeholder="Std.">
+                </li>
             </ul>
             <ul class="table_column">
                 <li class="table_column_title">
@@ -182,22 +245,47 @@
                 <li>-</li>
                 <li>
                     <span class="action_number">A5</span>
-                    <span id="edit_customer" class="action_button edit" title="Ändern"></span>
+                    <span id="edit_work" class="action_button edit" title="Ändern"></span>
                     <span class="action_number">A6</span>
-                    <span id="delete_customer" class="action_button delete" title="Löschen"></span>
+                    <span id="delete_work" class="action_button delete" title="Löschen"></span>
                     <span class="action_number">A8</span>
-                    <span id="save_edit_customer" class="action_button save"></span>
+                    <span id="save_edit_work" class="action_button save"></span>
                 </li>
             </ul>
             
         </div>
+        <ul>
+            <li class="new_work hidden">
+                <select name="" id="">
+                    <option value="Kunde wählen">Kunde wählen</option>
+                    <option value="Kunde_A">Kunde_A</option>
+                    <option value="Kunde_B">Kunde_B</option>
+                    <option value="Kunde_C">Kunde_C</option>
+                </select>
+                <select name="" id="">
+                    <option value="Projekt wählen">Projekt wählen</option>
+                    <option value="Projekt_A">Projekt_A</option>
+                    <option value="Projekt_B">Projekt_B</option>
+                    <option value="Projekt_C">Projekt_C</option>
+                </select>
+                <input type="text" placeholder="Datum Beginn">
+                <input type="text" placeholder="Datum Ende">
+                <select name="" id="">
+                    <option value="Mitarbeiter wählen">Mitarbeiter wählen</option>
+                    <option value="Tiren">Tiren, Maire</option>
+                    <option value="Loisen">Loisen, Kassi</option>
+                    <option value="Poli">Poli, Stral</option>
+                </select>
+                <input type="text" placeholder="Arbeitszeit">
+                <input type="text" placeholder="Arbeitszeit ohne Url/Kr">
+                <input type="text" placeholder="Tatsächlich Verfügbar">
+                <input type="text" placeholder="Mein Plan">
+                <span class="action_number">A7</span>
+                <span id="save_work" class="button save_button">Speichern</span>
+            </li>
+        </ul>
         <div class="app_content_footer">
-            <ul class="table_column">
-                <li>Umsatz</li>
-            </ul>
-            <ul class="table_column">
-                <li>10000000</li>
-            </ul>
+            
         </div>
     </div>
     
@@ -241,23 +329,23 @@
     </div>
 </div>
 <script>
-    $("#new_project").click(function() {
-        $(".new_project").removeClass("hidden");
+    $("#new_work").click(function() {
+        $(".new_work").removeClass("hidden");
     })
 
-    $("#save_project").click(function() {
-        $(".new_project").addClass("hidden");
+    $("#save_work").click(function() {
+        $(".new_work").addClass("hidden");
     })
 
-    $("#edit_project").click(function() {
-        $(".edit_project").removeClass("hidden");
-        $(".project").addClass("hidden");
+    /*$("#edit_work").click(function() {
+        $(".edit_work").removeClass("hidden");
+        $(".work").addClass("hidden");
     })
 
-    $("#save_edit_project").click(function() {
-        $(".edit_project").addClass("hidden");
-        $(".project").removeClass("hidden");
-    })
+    $("#save_edit_work").click(function() {
+        $(".edit_work").addClass("hidden");
+        $(".work").removeClass("hidden");
+    })*/
 
 </script>
 </body>

@@ -135,12 +135,13 @@ body {
 }
 
 select {
+    width: 90px;
     height: 22px;
     margin: 0 5px 0 0;
 }
 
 input[type="text"] {
-    width: 120px;
+    width: 90px;
     outline: none;
     margin: 0 5px 0 0;
 }
@@ -202,7 +203,7 @@ input[type="text"] {
     height: 20px;
     background-size: cover;
     background-position: 50%;
-    margin: 0 20px 0 0;
+    margin: 0 10px 0 0;
 }
 
 .edit {
